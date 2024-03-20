@@ -1,0 +1,43 @@
+@media(max-width:768){
+
+    body{
+        height: 100%;
+        width: 100%;
+    }
+
+    .team {
+        position: relative;
+        max-width: 5%;
+        
+     }
+     .team img {
+        width: 3px;
+        border-radius: 5%;
+        height: auto;
+        transition: 2s;
+        box-shadow: 0px 0px 50px #f60000;
+     }
+
+     .image-container img{
+        height: 5%;
+        width: 5%;
+     }
+     
+}
+
+@media(max-width:1024){
+
+    .row{
+        height: 100%;
+        width: 100%;
+       
+    }
+}
+
+@media(max-width:768){
+
+    .row{
+        height: 100%;
+        width: 100%;
+    }
+}

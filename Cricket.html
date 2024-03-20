@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cricket.Web</title>
+  <link rel="stylesheet" href="Cricket.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+  <!-- <script src="cricket.js"></script> -->
+  <div class="sticky-top">
+    
+  <div id="header">
+  
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-4">
+          <h1 id="logo">WicketWizard.com</h1>
+        </div>
+        <div class="col-md-8">
+          <ul id="menu" class="float-md-end">
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><select class="form-select" id="match1" aria-label="Default select example" onchange="match(this.value)">
+                <option selected>matches</option>
+                <option value="t20">T-20</option>
+                <option value="odi">ODI</option>
+
+              </select></a></li>
+
+            <li> <select class="form-select" aria-label="Default select example" onchange="scrollToSection(this.value)">
+                <option selected>Rankings</option>
+                <option  value="mens">MEN'S TEAM RANKINGS</option>
+                <option  value="womens">WOMEN'S TEAM RANKINGS</option>
+
+              </select>
+
+              </a></li>
+            <li><a href="#" id="awardsLink">Awards</a></li>
+            <li><a href="#" id="newsLink">News</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+   <section id="homeSection">
+    <div id="banner" class="py-5" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-lg-6">
+            <div class="banner-tittle">
+              <h1 class="title text-light">
+                "I have failed at times, but I never stopped trying."
+              </h1>
+              <p class="lead">
+                India solidify top position in World Test Championship
+                standings with big win over England
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-6 opacity-25">
+            <div class="borer">
+              <img id="Cricket"
+                src="https://wallpaperheart.com/wp-content/uploads/2018/03/Cricket-wallpapers-max.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <!-- <div class="img-1">
+                            <img src="../imges/img1.jpg" alt="" class="img_2">
+                        </div> -->
+            <div class="team">
+              <img src=../imges/img1.jpg alt="" class="team1">
+              <div class="overlay">
+                <div class="text">
+                  <!-- <h1>Shrilanka player </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <!-- <img src="../imges/img2.jpg" alt="" class="img_2"> -->
+            <div class="team">
+              <img src=../imges/img2.jpg alt="" class="team1">
+              <div class="overlay">
+                <div class="text">
+                  <!-- <h1>Shrilanka player </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <!-- <img src="../imges/img3.jpg" alt="" class="img_2"  > -->
+            <div class="team">
+              <img src=../imges/img3.jpg alt="" class="team1">
+              <div class="overlay">
+                <div class="text">
+                  <!-- <h1>Shrilanka player </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <!-- <img src="../imges/img4.jpg" alt="" class="img_2"> -->
+            <div class="team">
+              <img src=../imges/img4.jpg alt="" class="team1">
+              <div class="overlay">
+                <div class="text">
+                  <!-- <h1>Shrilanka player </h1> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <h5>
+      <div class="match-name text-center "  id="t20Section"  >
+        <hr>
+        Matches
+        <hr>
+      </div>
+    </h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="date">14 MARCH, 2024</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              Scotland tour of UAE, 2024 - 3rd T20I Dubai International
+              Cricket Stadium, Dubai
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              UNITED ARAB EMIRATES 21:00 Scotland SCOTLAND Match starts at
+              21:00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="matches"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" id="odiSection">
+          <div class="date">15 MARCH, 2024</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              ODI Sri Lanka tour of Bangladesh, 2024 - 2nd ODI Zahur Ahmed
+              Chowdhury Stadium, Chattogram
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              BANGLADESH 14:00 Sri Lanka SRI LANKA Match starts at 14:00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              T20I Afghanistan and Ireland tour of UAE, 2024 - 1st T20I
+              Sharjah Cricket Stadium, Sharjah
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              AFGHANISTAN 21:30 Ireland IRELAND Match starts at 21:30
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="date">16 MARCH, 2024</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              T20I Papua New Guinea in Malaysia, 2 T20I Series, 2024 - 1st
+              T20I Bayuemas Oval, Kuala Lumpur
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="matches">
+            <div class="shadow-sm p-3 mb-5 bg-body-tertiary rounded mt-3">
+              MALAYSIA 08:15 Papua New Guinea PAPUA NEW GUINEA Match starts at
+              08:15
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="menSection">
+  <div class="container" >
+    <div class="row">
+      <h1>
+        <hr>
+        MEN'S TEAM RANKINGS
+        <hr>
+      </h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">ODI - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">121</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">118</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">110</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">119</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">102</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">96</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">TEST - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">122</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">120</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">111</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">99</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">102</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">98</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">T20 - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">266</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">256</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">255</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">254</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">98</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">121</li>
+        </ul>
+      </div>
+    </div>
+  
+
+  
+    <div class="row my-3" >
+      <h1 id="womensSection">
+        <hr>
+        WOMEN'S TEAM RANKINGS <hr>
+
+      </h1>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">ODI - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">121</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">118</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">110</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">119</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">102</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">96</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">TEST - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">122</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">120</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">111</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">99</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">102</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">98</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">T20 - TEAM RANKINGS</h5>
+          </div>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item border border-black">01</li>
+          <li class="list-group-item border border-black"><span><img src="../imges/india flag.png" alt="" height="25px"
+                width="35px"></span> INDIA</li>
+          <li class="list-group-item border border-black">266</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item  border border-black">02</li>
+          <li class="list-group-item  border border-black"><span><img src="../imges/aus.png" alt="" height="25px"
+                width="35px"></span>AUSTRALIA</li>
+          <li class="list-group-item  border border-black">256</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item der border-black" der border-black>03</li>
+          <li class="list-group-item der border-black" der border-black><span><img src="../imges/africa.png" alt=""
+                height="25px" width="35px"></span>SOUTH AFRICA</li>
+          <li class="list-group-item der border-black">255</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item der border-black">04</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/pak.png" alt="" height="25px"
+                width="35px">PAKISTAN</li>
+          <li class="list-group-item der border-black">254</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item der border-black">05</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/new zalnd.png" alt="" height="25px"
+                width="35px">NEW ZEALAND</li>
+          <li class="list-group-item der border-black">98</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xxl">
+          <li class="list-group-item der border-black">06</li>
+          <li class="list-group-item der border-black"><span><img src="../imges/england.png" alt="" height="25px"
+                width="35px">ENGLAND</li>
+          <li class="list-group-item der border-black">121</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid pt-5" style="background-color: #0A0A0A;" id="awardsSection">
+    <h2 class="text-center text-warning"> <hr> Awards <hr></h2>
+    <h3 class="text-light fs-1">ICC MEN'S PLAYER OF THE MONTH</h3>
+    <br>
+    <p class="text-warning-emphasis fs-3 ">MARCH 2024 Winner</p>
+    <!-- <div class="container"><img src="../imges/background-awardss.svg" alt="" >  -->
+    <!-- <span class="tinted-image">
+        <img src="../imges/india flag.png" alt="" width="20px" height="20px" class="">
+      </span> -->
+    <div class="image-container">
+      <h3>
+        <div class="name">
+          Yashasvi
+          JAISWAL
+        </div>
+      </h3>
+      <img src="../imges/background-awardss.svg" class="px-5" alt="Main Image" height="1000px">
+      <!-- <img src="../imges/india flag.png" class="overlay-image" alt="Overlay Image" height="20px"> -->
+      <img src="../imges/Yash.jpg" class="overlay-image" alt="Overlay Image" height="700px" width="450px">
+    </div>
+  </div>
+  <!-- </div>
+  </div>
+  </div>
+  </div> -->
+  <h3 class="text-center mt-5 fs-2 text-danger-emphasis" id="newsSection"> <hr>News <hr></h3>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 pt-5 ">
+          <div class="card " style="width: 18rem;">
+            <img src="../imges/back1.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-5">Why Sri Lanka vs Bangladesh is like large men fake-wrestling each other in
+                too-tight underpants</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 pt-5">
+          <div class="card " style="width: 18rem;">
+            <img src="../imges/back2.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-5">Bazball is genius and wonderful. Also ridiculous, annoying and bound to fail</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 pt-5">
+          <div class="card " style="width: 18rem;">
+            <img src="../imges/back3.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-5">Steve Harmison on his 7 for 12 in Jamaica: 'I felt invincible'</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4 pt-5 ">
+          <div class="card " style="width: 18rem;">
+            <img src="../imges/back4.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-5"> 1] Jofra Archer turns up the heat - for a Karnataka XI <br>2] Who's happiest to
+                see Ben Duckett return home?</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 pt-5">
+          <div class="card " style="width: 18rem;">
+            <img src="../imges/back5.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text fs-5">1] Bazball is genius and wonderful. Also ridiculous, annoying and bound to fail
+                <br> 2] What's gone wrong with UP Warriorz's fielding?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 pt-5">
+          <div class="card ">
+            <img src="../imges/back61.webp" class="card-img-top" alt="...">
+            <div class="card-body " style="width: 18rem;">
+              <p class="card-text fs-5">Steve Harmison on his 7 for 12 in Jamaica: 'I felt invincible'</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="logo-group-container flex flex-col items-center mt-4 text-center pt-5" data-e2e="footer__sponsor-list">
+      <div class="flex flex-wrap justify-center"><a class="p-0 m-0 inline-block mx-2.5 pb-6 md:pb-4 text-center"
+          href="https://www.emirates.com/english/book/" target="_blank" rel="noopener noreferrer"><img alt="emirates"
+            loading="lazy" width="120" height="40" decoding="async" data-nimg="1"
+            class="mx-auto my-0 flex-none w-[144px]"
+            src="https://images.icc-cricket.com/image/private/t_w_180/v1705588073/prd/assets/sponsors/5-T1-Emirates_dfab1b.png"
+            style="color: transparent;"></a><a class="p-0 m-0 inline-block mx-2.5 pb-6 md:pb-4"
+          href="https://www.aramco.com/" target="_blank" rel="noopener noreferrer"><img alt="aramco" loading="lazy"
+            width="120" height="40" decoding="async" data-nimg="1" class="mx-auto my-0 flex-none w-[144px]"
+            src="https://images.icc-cricket.com/image/private/t_w_180/v1705587944/prd/assets/sponsors/4-T1-aramco-01_rpnfln.png"
+            style="color: transparent;"></a></div>
+      <h4 class="text-inherit text-center text-sm font-bold uppercase"> <br>Premier Partners</h4>
+    </div>
+
+    <div>
+      <div class="logo-group-container flex flex-col items-center mt-4 text-center pt-5"
+        data-e2e="footer__sponsor-list">
+        <div class="flex flex-wrap justify-center"><a class="p-0 m-0 inline-block mx-2.5 pb-6 md:pb-4"
+            href="https://www.dpworld.com/" target="_blank" rel="noopener noreferrer"><img alt="dp-world" loading="lazy"
+              width="120" height="40" decoding="async" data-nimg="1" class="mx-auto my-0 flex-none w-[120px]"
+              src="https://images.icc-cricket.com/image/private/t_w_180/v1705588507/prd/assets/sponsors/DP_World_Light_Dark_obzfai.png"
+              style="color: transparent;"></a><a class="p-0 m-0 inline-block mx-2.5 pb-6 md:pb-4"
+            href="https://www.coca-colacompany.com/" target="_blank" rel="noopener noreferrer"><img alt="coca-cola"
+              loading="lazy" width="120" height="40" decoding="async" data-nimg="1"
+              class="mx-auto my-0 flex-none w-[120px]"
+              src="https://images.icc-cricket.com/image/private/t_w_180/v1706102226/prd/assets/sponsors/cocacola_yzkrqa.png"
+              style="color: transparent;"></a>
+          <div class="p-0 m-0 inline-block mx-2.5 pb-6 md:pb-4"><img alt="indusind-bank" loading="lazy" width="120"
+              height="40" decoding="async" data-nimg="1" class="mx-auto my-0 flex-none w-[120px]"
+              src="https://images.icc-cricket.com/image/private/t_w_180/v1705587839/prd/assets/sponsors/6-T1-IndusInd_kttrbz.png"
+              style="color: transparent;"></div>
+        </div>
+        <h4 class="text-inherit text-center text-sm font-bold uppercase"> <br>Global Partners</h4>
+      </div>
+      <div class="divider border-t lg:mt-6 w-full mt-4"></div>
+    </div>
+    <div class="flex justify-center flex-col items-center">
+      <div class="my-6 text-center"><!--$--><a href="/"><img alt="ICC logo footer" loading="lazy" width="50" height="50"
+            decoding="async" data-nimg="1" class="max-sm:w-full h-full" style="color:transparent"
+            src="https://images.icc-cricket.com/image/private/t_q-best/v1703670525/prd/assets/logos/icc-footer-logo_f3mbiw.svg"></a><!--/$-->
+        <div class="htmlcontent-code w-full">
+          <style>
+            .wrapperWithHalfBackground::before {
+              pointer-events: none;
+            }
+          </style>
+        </div>
+        <div class="htmlcontent-code w-full">
+          <script>document.querySelectorAll('a[href^="#"]')?.forEach((a) => { a.addEventListener('click', (event) => { event?.preventDefault(); const targetID = event?.target?.href?.split?.('#')?.[1]; const target = document.getElementById(targetID); target?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return false; }); });</script>
+        </div>
+      </div>
+      <div class="text-grey-dark text-xs text-center opacity-80">Copyright 2024 ICC. All rights reserved.</div>
+    </div>
+  </div>
+</section>
+<script>
+  function scrollToSection(section) {
+    if (section === 'mens') {
+      const mensSection = document.getElementById('menSection');
+      mensSection.scrollIntoView({ behavior: 'instant' });
+    } else if (section === 'womens') {
+      const womensSection = document.getElementById('womensSection');
+      womensSection.scrollIntoView({ behavior: 'instant' });
+    }
+  }
+
+  function match(section) {
+    if (section === 't20') {
+      const t20Section = document.getElementById('t20Section');
+      t20Section.scrollIntoView({ behavior: 'instant' });
+    } else if (section === 'odi') {
+      const odiSection = document.getElementById('odiSection');
+      odiSection.scrollIntoView({ behavior: 'instant' });
+    }
+  }
+
+  const awardsLink = document.getElementById('awardsLink');
+awardsLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  const awardsSection = document.getElementById('awardsSection');
+  awardsSection.scrollIntoView({ behavior: 'instant' });
+});
+
+const newsLink = document.getElementById('newsLink');
+newsLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  const awardsSection = document.getElementById('newsSection');
+  awardsSection.scrollIntoView({ behavior: 'instant' });
+});
+
+const homeLink = document.getElementById('homeLink');
+homeLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  const awardsSection = document.getElementById('homeSection');
+  awardsSection.scrollIntoView({ behavior: 'instant' });
+});
+
+</script>
+</body>
+
+</html>
